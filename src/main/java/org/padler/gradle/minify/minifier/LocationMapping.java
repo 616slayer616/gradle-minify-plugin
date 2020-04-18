@@ -8,7 +8,7 @@ public class LocationMapping implements SourceMap.LocationMapping {
     @Nullable
     @Override
     public String map(String location) {
-        if (location.contains("/"))
+        if (location.contains('/'))
             return location.substring(location.lastIndexOf("/") + 1);
         else
             return null;
