@@ -1,13 +1,19 @@
 package org.padler.gradle.minify;
 
+import org.gradle.api.GradleException;
 import org.gradle.api.tasks.TaskAction;
 import org.padler.gradle.minify.minifier.CssMinifier;
 import org.padler.gradle.minify.minifier.JsMinifier;
 import org.padler.gradle.minify.minifier.Minifier;
 import org.padler.gradle.minify.minifier.options.CSSMinifierOptions;
 import org.padler.gradle.minify.minifier.options.JSMinifierOptions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class MinifyTask extends MinifyTaskBase {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(MinifyTask.class);
+
     @TaskAction
     public void minify() {
         if (!extension.getCssSrcDir().isEmpty() && !extension.getCssDstDir().isEmpty()) {
@@ -22,6 +28,9 @@ public class MinifyTask extends MinifyTaskBase {
             String dstDir = extension.getJsDstDir();
             minifier.minify(srcDir, dstDir);
         }
+
+        throw new GradleException("Gradle Minify Plugin is deprecated\n" +
+                "please use https://github.com/gradle-webtools/gradle-minify-plugin instead.");
     }
 
     private CssMinifier createCSSMinifier() {

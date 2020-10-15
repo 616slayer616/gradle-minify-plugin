@@ -10,7 +10,7 @@ plugins {
 }
 
 group = "org.padler.gradle.minify"
-version = "1.7.0"
+version = "1.8.0"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
