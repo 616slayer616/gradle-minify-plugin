@@ -1,3 +1,5 @@
+> Re-released here: https://github.com/gradle-webtools/gradle-minify-plugin
+
 # Gradle Minify Plugin!
 [![Build Status](https://travis-ci.com/616slayer616/gradle-minify-plugin.svg?branch=master)](https://travis-ci.com/616slayer616/gradle-minify-plugin)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=616slayer616_gradle-minify-plugin&metric=alert_status)](https://sonarcloud.io/dashboard?id=616slayer616_gradle-minify-plugin)
@@ -17,7 +19,7 @@ Uses [Google Closure Compiler](https://github.com/google/closure-compiler) and [
 ### Gradle
 ```groovy
 plugins {
-  id "org.padler.gradle.minify" version "1.6.0"
+  id "org.padler.gradle.minify" version "1.8.0"
 }
 ```
 
@@ -30,7 +32,7 @@ buildscript {
     }
   }
   dependencies {
-    classpath "gradle.plugin.org.padler.gradle.minify:gradle-minify-plugin:1.6.0"
+    classpath "gradle.plugin.org.padler.gradle.minify:gradle-minify-plugin:1.8.0"
   }
 }
 
